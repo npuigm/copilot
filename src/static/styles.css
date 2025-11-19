@@ -151,12 +151,16 @@ button:hover {
 
 /* Bulleted, compact, card-like participants list */
 .participants-list {
-  list-style: disc inside;
+  list-style: none;
   margin: 0;
-  padding-left: 12px;
+  padding-left: 0;
 }
 
-.participants-list li {
+.participants-list .participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin: 6px 0;
   padding: 8px 10px;
   background: linear-gradient(180deg, #ffffff, #f6fbff);
@@ -164,7 +168,27 @@ button:hover {
   border-radius: 6px;
   color: #0b3a66;
   font-size: 14px;
-  display: block;
+}
+
+.participant-email {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.participant-remove {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.participant-remove:hover {
+  background: rgba(198,40,40,0.08);
 }
 
 /* No participants hint */
